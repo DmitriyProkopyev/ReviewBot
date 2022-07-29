@@ -1,0 +1,15 @@
+C:\Users\proko\source\repos\ReviewBot\ReviewBot\bin\Debug\ReviewBot.exe.config
+C:\Users\proko\source\repos\ReviewBot\ReviewBot\bin\Debug\ReviewBot.exe
+C:\Users\proko\source\repos\ReviewBot\ReviewBot\bin\Debug\ReviewBot.pdb
+C:\Users\proko\source\repos\ReviewBot\ReviewBot\obj\Debug\ReviewBot.csprojAssemblyReference.cache
+C:\Users\proko\source\repos\ReviewBot\ReviewBot\obj\Debug\ReviewBot.csproj.CoreCompileInputs.cache
+C:\Users\proko\source\repos\ReviewBot\ReviewBot\obj\Debug\ReviewBot.exe
+C:\Users\proko\source\repos\ReviewBot\ReviewBot\obj\Debug\ReviewBot.pdb
+I:\source\repos\ReviewBot\ReviewBot\bin\Debug\ReviewBot.exe.config
+I:\source\repos\ReviewBot\ReviewBot\bin\Debug\ReviewBot.exe
+I:\source\repos\ReviewBot\ReviewBot\bin\Debug\ReviewBot.pdb
+I:\source\repos\ReviewBot\ReviewBot\obj\Debug\ReviewBot.csproj.AssemblyReference.cache
+I:\source\repos\ReviewBot\ReviewBot\obj\Debug\ReviewBot.csproj.SuggestedBindingRedirects.cache
+I:\source\repos\ReviewBot\ReviewBot\obj\Debug\ReviewBot.csproj.CoreCompileInputs.cache
+I:\source\repos\ReviewBot\ReviewBot\obj\Debug\ReviewBot.exe
+I:\source\repos\ReviewBot\ReviewBot\obj\Debug\ReviewBot.pdb
