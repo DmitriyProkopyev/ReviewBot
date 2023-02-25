@@ -5,35 +5,35 @@ using Infrastructure;
 
 namespace Domain
 {
-    public class ReviewsFormatter : IDataFormatter<IEnumerable<(string, string)>, Review[]>
+    public class ReviewsFormatter : IDataFormatter<IEnumerable<(string, string)>, IEnumerable<Category>>
     {
-        public Review[] Format(IEnumerable<(string, string)> input)
+        public IEnumerable<Category> Format(IEnumerable<(string, string)> input)
         {
-            string additional = string.Empty;
-            var result = new List<Review>();
-
-            foreach (var item in input)
+            string name = input.First().Item1;
+            var reviews = new Queue<Review>();
+            
+            foreach (var pair in input.Skip(1))
             {
-                if (item.Item2 == string.Empty)
+                if (pair.Item2 == string.Empty)
                 {
-                    additional = item.Item1;
-
-                    if (result.Count == 0)
-                        continue;
-
-                    var previous = result[result.Count - 1];
-                    result[result.Count - 1] = new Review(previous.Name + "\n", previous.Description);
+                    yield return new Category(name, Parse());
+                    name = pair.Item1;
                     continue;
                 }
 
-                string name = additional + " " + item.Item1;
-                result.Add(new Review(name, item.Item2));
+                reviews.Enqueue(new Review(pair.Item1, pair.Item2));
             }
 
-            return result.ToArray();
+            Review[] Parse()
+            {
+                var result = new Review[reviews.Count];
+                for (int i = 0; i < result.Length; i++)
+                    result[i] = reviews.Dequeue();
+                return result;
+            }
         }
 
-        public IEnumerable<(string, string)> Unformat(Review[] input)
+        public IEnumerable<(string, string)> Unformat(IEnumerable<Category> input)
         {
             throw new NotSupportedException();
         }

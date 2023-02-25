@@ -19,10 +19,12 @@ namespace Interface
         {
             int index = 0;
 
-            foreach (string name in _book.Names)
+            foreach (var group in _book.Categories)
             {
-                index++;
-                Console.WriteLine(index + ". " + name);
+                Console.WriteLine("\n" + group.Name + "\n");
+
+                foreach (var review in group)
+                    Console.WriteLine(++index + ". " + review.Name);
             }
 
             Console.WriteLine("\nНомер замечания:\n");
@@ -69,7 +71,7 @@ namespace Interface
             
             for (int i = 0; i < Console.WindowWidth; i++)
                 Console.Write(' ');
-
+            
             Console.CursorTop -= 1;
             Console.CursorLeft = 0;
         }

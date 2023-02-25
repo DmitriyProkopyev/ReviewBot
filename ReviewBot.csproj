@@ -13,6 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <LangVersion>default</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application\Config.cs" />
+    <Compile Include="Domain\Category.cs" />
     <Compile Include="Domain\Review.cs" />
     <Compile Include="Domain\ReviewBook.cs" />
     <Compile Include="Domain\ReviewsFormatter.cs" />
